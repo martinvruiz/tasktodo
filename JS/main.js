@@ -5,7 +5,7 @@ let done = document.getElementById("done")
 
 function createTaskElement(task){
     let addTask = document.createElement("div");
-    addTask.className = "w-4/5 max-w-full p-2 my-2 mx-auto text-white text-center flex justify-between items-center";
+    addTask.className = "w-4/5 max-w-full p-2 my-2 mx-auto font-extrabold text-white text-center flex justify-between items-center";
 
     let taskText = document.createElement("span");
     taskText.className = "break-words";
