@@ -6,13 +6,13 @@
     <title>Task to do</title>
     <link rel="stylesheet" href="CSS/tailwind.css">
 </head>
-<body class="bg-gradient-to-r from-blue-500 to to-blue-900">
+<body class="bg-gradient-to-r from-blue-500 to to-blue-900 p-0">
     <section class="h-96">
         <div class="h-64 flex flex-col justify-center text-white">
-            <h1 class="text-6xl font-bold font-sans w-full text-center my-7 mb-6">
+            <h1 class="md:text-6xl text-3xl font-bold font-sans w-full text-center my-7 mb-6">
                 Bienvenido/a! a TaskToDo
             </h1>
-            <p class="text-center text-xl">Te ayudamos a organizarte, para ahorrar tiempo y le puedas dar prioridad tus tareas</p>
+            <p class="text-center md:text-xl text-lg">Te ayudamos a organizarte, para ahorrar tiempo y le puedas dar prioridad tus tareas</p>
         </div>
         <div class="w-full flex justify-center">
             <button id="addTask" class="border-2 rounded-lg bg-green-600 h-12 w-2/5 my-1 flex justify-center items-center text-white">
@@ -20,7 +20,7 @@
             </button>
         </div>
     </section>
-    <main class="grid grid-cols-3 gap-3 mb-4 pb-4 justify-items-center">
+    <main class="md:grid grid-cols-3 gap-3 mb-8 pb-4 flex flex-col justify-items-center items-center h-96 md:h-40">
         <section id="toDo" class="column p-4 w-4/5 text-center h-auto border-white border-4 border-solid rounded-xl">
             <h3 class="text-xl text-white font-bold mb-2 border-b-4 border-gray-600">Por hacer</h3>
         </section>
@@ -28,15 +28,11 @@
             <h3 class="text-xl text-white font-bold mb-2 border-b-4 border-gray-600">En proceso</h3>
             <div></div>
         </section>
-        <section id="done" class="column p-4 w-4/5 text-center h-auto border-white border-4 border-solid rounded-xl">
+        <section id="done" class="column p-4 w-4/5 text-center h-auto border-white border-4 border-solid rounded-xl mb-5">
             <h3 class="text-xl text-white font-bold mb-2 border-b-4 border-gray-600">Terminado</h3>
             <div></div>
         </section>
     </main>
-
-    <footer class="w-full bg-blue-400 text-center bottom-0 fixed">
-        <p>BY Martin Villalo Ruiz</p>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="JS/main.js"></script>
 </body>

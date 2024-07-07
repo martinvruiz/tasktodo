@@ -40,13 +40,32 @@ function createTaskElement(task){
                 moveDone.classList.add("hidden")
             })
 
+            addTask.appendChild(moveDone)
+
             moveDone.addEventListener("click", () => {
                 done.appendChild(addTask)
                 moveDone.remove()
-            })
-    addTask.appendChild(moveDone)
-});
+            
 
+            let deleteItem = document.createElement("button")
+            deleteItem.textContent= "Eliminar"
+            deleteItem.className = "hidden bg-red-600 text-white px-2 py-1 rounded ml-2"
+    
+            addTask.addEventListener("mouseenter", ()=>{
+                deleteItem.classList.remove("hidden")
+            })
+    
+            addTask.addEventListener("mouseleave", ()=>{
+                deleteItem.classList.add("hidden")
+            })
+    
+            deleteItem.addEventListener("click", ()=>{
+                done.removeChild(addTask)
+            })
+
+            addTask.appendChild(deleteItem)
+        })
+        });
     addTask.appendChild(taskText);
     addTask.appendChild(moveButton);
 
